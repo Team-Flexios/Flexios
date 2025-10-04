@@ -4,10 +4,9 @@
   "description": "Stretches!",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "NODE_ENV=production node server/server.js",
-    "build": "NODE_ENV=production webpack",
-    "dev": "concurrently \"nodemon server/server.js\" \"NODE_ENV=development webpack serve --open\""
+    "dev": "webpack serve --config webpack.config.js --mode development",
+    "build": "webpack --config webpack.config.js --mode production",
+    "start": "node Server/server.js"
   },
   "author": "Alana Herlands, Serena Romano, Diane Moon, Josh Hall, Rodrigo Samour Calderon",
   "license": "ISC",
